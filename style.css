@@ -1,148 +1,40 @@
-/* Global */
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    background: #e0e7ff;
-    color: #333;
-}
-
 /* Navigation */
 nav {
-    background: linear-gradient(90deg, #4f46e5, #3b82f6);
-    padding: 15px 0;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background: #4f46e5;
+  text-align: center;
+  padding: 15px 0;
 }
 nav a {
-    color: white;
-    margin: 0 20px;
-    font-weight: 600;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 10px;
-    transition: all 0.3s ease;
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: 0.3s;
 }
-nav a:hover {
-    background: rgba(255,255,255,0.2);
-    transform: scale(1.05);
+nav a.active, nav a:hover {
+  background: #3b82f6;
 }
 
 /* Sections */
-section {
-    display: none;
-    padding: 40px 20px;
-    max-width: 900px;
-    margin: 30px auto;
-    background: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-}
+section { display: none; padding: 40px; max-width: 900px; margin: 30px auto; background: #fff; border-radius: 15px; }
 section.active { display: block; }
 
-h2 {
-    text-align: center;
-    color: #4f46e5;
-    margin-bottom: 25px;
-}
+/* Event Cards */
+.event-card { background: #6366f1; color: white; padding: 20px; margin: 15px 0; border-radius: 15px; }
 
-/* Events Cards */
-.event-card {
-    background: linear-gradient(135deg, #a5b4fc, #6366f1);
-    color: white;
-    padding: 20px;
-    margin: 15px 0;
-    border-radius: 15px;
-    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.event-card:hover {
-    transform: translateY(-7px);
-    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
-}
+/* Sub-tabs */
+.sub-tabs { text-align: center; margin-bottom: 20px; }
+.sub-tabs button { padding: 10px 20px; margin: 0 10px; border-radius: 10px; cursor: pointer; }
+.sub-tabs button.active { background: #4f46e5; color: white; }
 
-/* Sub-tabs inside Complaints */
-.sub-tabs {
-    text-align: center;
-    margin-bottom: 20px;
-}
-.sub-tabs button {
-    background: #4f46e5;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin: 0 10px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-.sub-tabs button:hover {
-    background: #3b82f6;
-}
+/* Sub-tab content */
 .sub-tab { display: none; }
 .sub-tab.active { display: block; }
 
-/* Complaint Form */
-form {
-    display: flex;
-    flex-direction: column;
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-input, textarea, button {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border-radius: 10px;
-    border: 1px solid #ddd;
-    font-size: 1rem;
-    outline: none;
-    transition: 0.3s;
-}
-input:focus, textarea:focus {
-    border-color: #4f46e5;
-    box-shadow: 0 0 8px rgba(79,70,229,0.3);
-}
-button {
-    background: #4f46e5;
-    color: white;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 5px 15px rgba(79,70,229,0.3);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(79,70,229,0.4);
-}
-
-/* Timetable Table */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-th, td {
-    padding: 14px;
-    text-align: center;
-}
-th {
-    background: #3b82f6;
-    color: white;
-}
-tr:nth-child(even) { background: #f3f4f6; }
-tr:hover { background: #93c5fd; }
-
-/* Complaint message */
-#complaintMsg {
-    margin-top: 15px;
-    color: #059669;
-    font-weight: bold;
-    text-align: center;
-    font-size: 1.1rem;
-}
+/* Form & Table styling */
+form { display: flex; flex-direction: column; }
+input, textarea, button { padding: 10px; margin: 10px 0; border-radius: 8px; border: 1px solid #ddd; }
+button { background: #4f46e5; color: white; border: none; cursor: pointer; }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 12px; border: 1px solid #ddd; text-align: center; }
